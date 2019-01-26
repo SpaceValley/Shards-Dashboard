@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shards Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+</head>
+<body>
+<nav>
+    <div class="dashboardMenu">
+        <div class="menuHeadingWrap">
+        <div class="menuHeading"><img src="./shards-dashboards-logo.svg" width="25" height="25" alt="logo"
+                                      class="logoImg">Shards Dashboard</div>
+            <div class="closeMenuBtn" onclick="hideMenu()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="menuBarSearchWrap ">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <a href="./Blog%20Dashboard.html" class="menuItem"><i class="fas fa-pen menuIcon"></i>Blog Dashboard</a>
+        <a href="./Blog%20posts.html" class="menuItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+        <a href="./Add%20new%20Post.html" class="menuItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+        <a href="./Tables.html" class="menuItem"><i class="fas fa-table menuIcon"></i>Tables</a>
+        <a href="./User%20Profile.html" class="menuItem"><i class="fas fa-user menuIcon"></i>User profile</a>
+    </div>
+</nav>
+<div class="contentWrap">
+    <div class="userTopBar">
+        <div class="searchWrapper">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <div class="userBarWrap">
+            <div class="profileNotificationWrap">
+                <div class="notificationWrapper"><i class="fas fa-bell"></i></div>
+                <div class="userSelectProfile" onclick="openDropdown()"><img src="./0.jpg" width="40" height="40"
+                                                                             alt="logo" class="profileImg">
+                    <div class="userName">Sierra Brooks
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown" style="display: none">
+                            <a href="./User%20Profile.html" class="dropdownItem"><i class="fas fa-user menuIcon"></i>Profile</a>
+                            <a href="./Add%20new%20Post.html" class="dropdownItem"><i
+                                    class="far fa-plus-square menuIcon"></i>Add new post</a>
+                            <a href="./Blog%20posts.html" class="dropdownItem"><i class="fab fa-elementor menuIcon"></i>Blog
+                                posts</a>
+                            <a href="#" class="dropdownItem logout"><i
+                                    class="fas fa-sign-out-alt menuIcon"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snackBar" onclick="showMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="dashboardWrapper">
+        <div class="dashboardHeading">dashboard</div>
+        <div class="dashboardSubheading">Blog Overview</div>
+        <div class="tilesWrapper">
+            <div class="tiles firstTile">
+                <div class="cardInfo">posts</div>
+                <div class="cardNumber">2,390</div>
+                <div class="graphPercent increase">4.7%
+                    <i class="fas fa-caret-up increaseIcon"></i>
+                </div>
+                <div class="graphWrap">
+                    <canvas id="line-chart-1"></canvas>
+                </div>
+            </div>
+            <div class="tiles secondTile">
+                <div class="cardInfo">pages</div>
+                <div class="cardNumber">182</div>
+                <div class="graphPercent increase">12.4%
+                    <i class="fas fa-caret-up increaseIcon"></i>
+                </div>
+                <div class="graphWrap">
+                    <canvas id="line-chart-2"></canvas>
+                </div>
+            </div>
+            <div class="tiles thirdTile">
+                <div class="cardInfo">comments</div>
+                <div class="cardNumber">8,147</div>
+                <div class="graphPercent decrease">3.8%
+                    <i class="fas fa-caret-down decreaseIcon"></i>
+                </div>
+                <div class="graphWrap">
+                    <canvas id="line-chart-3"></canvas>
+                </div>
+            </div>
+            <div class="tiles fourthTile">
+                <div class="cardInfo">users</div>
+                <div class="cardNumber">2,413</div>
+                <div class="graphPercent increase">12.4%
+                    <i class="fas fa-caret-up increaseIcon"></i>
+                </div>
+                <div class="graphWrap">
+                    <canvas id="line-chart-4"></canvas>
+                </div>
+            </div>
+            <div class="tiles fifthTile">
+                <div class="cardInfo">subscribers</div>
+                <div class="cardNumber">17,281</div>
+                <div class="graphPercent decrease">2.4%
+                    <i class="fas fa-caret-down decreaseIcon"></i>
+                </div>
+                <div class="graphWrap">
+                    <canvas id="line-chart-5"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="infoCardsWrapper">
+            <div class="usersGraphicsCard">
+                <div class="cardHeading">Users</div>
+                <div class="usersGraphWrap">
+                    <canvas id="line-chart"></canvas>
+                </div>
+            </div>
+            <div class="usersByDeviceDiagramCard">
+                <div class="cardHeading">Users by device</div>
+                <div class="usersByDeviceDiagramGraphWrap">
+                    <canvas id="pie-chart"></canvas>
+                </div>
+                <div class="referralChoiseWrap">
+                    <select class="referralDateChoise">
+                        <option value="">Last Week</option>
+                        <option value="">Today</option>
+                        <option value="">Last Month</option>
+                        <option value="">Last Year</option>
+                    </select>
+                    <div class="fullReport">Full report<i class="fas fa-long-arrow-alt-right"></i></div>
+                </div>
+            </div>
+            <div class="newDraftCard">
+                <div class="cardHeading">New Draft</div>
+                <div class="newDraftContentWrap">
+                    <input type="text" placeholder="Brave New World" class="NewDraftInput">
+                    <textarea class="NewDraftTextarea"
+                              placeholder="Words can be like X-rays if you use them properly..."></textarea>
+                    <div class="createDraftBtn">Create Draft</div>
+                </div>
+            </div>
+            <div class="discussionsCard">
+                <div class="cardHeading">Discussions</div>
+                <div class="discussionWrap">
+                    <img src="./1.jpg" alt="userAvatar" class="userAvatar">
+                    <div class="discussionShortInfo">
+                        <div class="discussionText"><span class="darkText">James Johnson</span> on <span
+                                class="darkText">Hello World!</span> - 3 days ago<br>
+                            Well, the way they make shows is, they make one show ...
+                        </div>
+                        <div class="discussionBtnWrap">
+                            <div class="approve discussionAction"><i class="fas fa-check"></i>Approve</div>
+                            <div class="reject discussionAction"><i class="fas fa-times"></i>Reject</div>
+                            <div class="edit discussionAction"><i class="fas fa-ellipsis-v editIcon"></i>Edit</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussionWrap">
+                    <img src="./2.jpg" alt="userAvatar" class="userAvatar">
+                    <div class="discussionShortInfo">
+                        <div class="discussionText"><span class="darkText">James Johnson</span> on <span
+                                class="darkText">Hello World!</span> - 4 days ago<br>
+                            Well, the way they make shows is, they make one show ...
+                        </div>
+                        <div class="discussionBtnWrap">
+                            <div class="approve discussionAction"><i class="fas fa-check"></i>Approve</div>
+                            <div class="reject discussionAction"><i class="fas fa-times"></i>Reject</div>
+                            <div class="edit discussionAction"><i class="fas fa-ellipsis-v editIcon"></i>Edit</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discussionWrap">
+                    <img src="./3.jpg" alt="userAvatar" class="userAvatar">
+                    <div class="discussionShortInfo">
+                        <div class="discussionText"><span class="darkText">James Johnson</span> on <span
+                                class="darkText">Hello World!</span> - 5 days ago<br>
+                            Well, the way they make shows is, they make one show ...
+                        </div>
+                        <div class="discussionBtnWrap">
+                            <div class="approve discussionAction"><i class="fas fa-check"></i>Approve</div>
+                            <div class="reject discussionAction"><i class="fas fa-times"></i>Reject</div>
+                            <div class="edit discussionAction"><i class="fas fa-ellipsis-v editIcon"></i>Edit</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="viewCommentsBtn">View All Comments</div>
+            </div>
+            <div class="topReferralsCard">
+                <div class="cardHeading">Top Referrals</div>
+                <div class="referralWrap">
+                    <div class="refferalName">GitHub</div>
+                    <div class="refferalValue">19,291</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">Stack Overflow</div>
+                    <div class="refferalValue">11,201</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">Hacker News</div>
+                    <div class="refferalValue">9,291</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">Reddit</div>
+                    <div class="refferalValue">8,281</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">The Next Web</div>
+                    <div class="refferalValue">7,128</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">Tech Crunch</div>
+                    <div class="refferalValue">6,218</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">YouTube</div>
+                    <div class="refferalValue">1,218</div>
+                </div>
+                <div class="referralWrap">
+                    <div class="refferalName">Adobe</div>
+                    <div class="refferalValue">827</div>
+                </div>
+                <div class="referralChoiseWrap">
+                    <select class="referralDateChoise">
+                        <option value="">Last Week</option>
+                        <option value="">Today</option>
+                        <option value="">Last Month</option>
+                        <option value="">Last Year</option>
+                    </select>
+                    <div class="fullReport">Full report<i class="fas fa-long-arrow-alt-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="./Blog%20Dashboard.html" class="footerLink">Home</a>
+        <a href="#" class="footerLink">Services</a>
+        <a href="#" class="footerLink">About</a>
+        <a href="#" class="footerLink">Products</a>
+        <a href="#" class="footerLink">Blog</a>
+    </footer>
+</div>
+<script src="./blog%20dashboard%20graphs.js"></script>
+<script src="blogDashboard.js"></script>
+</body>
+</html>

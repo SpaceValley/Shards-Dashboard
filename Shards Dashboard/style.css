@@ -1,0 +1,1769 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboardMenu {
+    height: 100vh;
+    box-shadow: 2px 0 10px gainsboro;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    z-index: 10;
+}
+@keyframes showMenu {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes hideMenu {
+    from {
+        width: 100%;
+        opacity: 1
+    }
+    to {
+        width: 0%;
+        opacity: 0;
+    }
+}
+.menuHeading {
+    width: 100%;
+    font-size: 17px;
+    font-family: "Yu Gothic UI Semibold";
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color:#3d5170;
+    box-sizing: border-box;
+}
+
+.menuHeadingWrap{
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    cursor: pointer;
+}
+.logoImg {
+    padding-left: 15px;
+    padding-right: 10px;
+}
+.profileImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.menuItem{
+    width: 100%;
+    font-size: 14px;
+    font-family: Tahoma;
+    padding: 17px 0 17px 25px;
+    border-bottom: 1px solid #e1e5eb;
+    color:#3d5170;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+    transition: all 250ms;
+    box-sizing: border-box;
+}
+.menuItem:hover i ,.menuItem:hover {
+    background: #fbfbfb;
+    color:#007bff;
+
+}
+
+.menuItem:hover {
+    border-left:3px solid #007bff;
+
+}
+.menuIcon {
+    margin-right: 15px;
+    color:gainsboro;
+}
+
+.fa-ellipsis-v:before {
+    margin-right: 7px;
+}
+
+.fa-search {
+    color:gainsboro;
+    padding-right: 10px;
+}
+.fa-bell{
+    color: gainsboro;
+}
+
+.fa-caret-down,.fa-bars,.fa-arrow-right {
+    color: gray;
+}
+
+.fa-sign-out-alt {
+    color: #c4183c;
+}
+.userTopBar {
+    display: flex;
+    flex-direction: row;
+    box-shadow:0 2px 10px gainsboro;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+.searchWrapper {
+    width: calc(100% - 237px);
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menuBarSearchWrap{
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+.topSearch{
+    border:none;
+    background:none;
+    outline: 0;
+    line-height: 25px;
+    font-size: 13px;
+    font-family: "Yu Gothic UI";
+    color: gray;
+}
+
+.topSearch:focus {
+    border: none;
+    background:none;
+    outline: 0;
+}
+.userBarWrap,.profileNotificationWrap{
+    display: flex;
+    flex-direction: row;
+}
+
+.notificationWrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left:1px solid gainsboro;
+    border-right:1px solid gainsboro;
+}
+.userSelectProfile {
+    width: 175px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.userName {
+    font-size: 13px;
+    color: #3d5170;
+    padding-left: 10px;
+    padding-right: 7px;
+    font-family: Tahoma;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: absolute;
+    width: 175px;
+    top:38px;
+    right: -15px;
+    background: white;
+    box-shadow:0 4px 20px 2px gainsboro;
+    z-index: 5;
+    line-height: 35px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 1s;
+}
+
+.dropdownItem {
+    font-family: Tahoma;
+    text-decoration: none;
+    display: block;
+    color: #3d5170;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+.dropdownItem:hover {
+    background: #f5f6f8;
+    transition: all 250ms;
+}
+.logout {
+    color: #c4183c;
+    border-top: 1px solid gainsboro;
+    padding: 17px;
+}
+.userName:hover {
+    display: block;
+
+}
+
+.snackBar,.closeMenuBtn{
+    width: 71px;
+    height: 60px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid gainsboro;
+}
+
+ .contentWrap {
+     margin-left: 225px;
+ }
+ .dashboardWrapper{
+     padding-left: 20px;
+     padding-right: 20px;
+     background-color: #f5f6f8;
+ }
+ .dashboardHeading {
+     font-size: 10px;
+     font-family: "Yu Gothic UI Semibold";
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     color: #818ea3;
+     padding-top: 30px;
+ }
+
+ .dashboardSubheading {
+     font-family: "Yu Gothic UI Semibold";
+     font-size: 26px;
+     font-weight: 500;
+     padding-bottom: 20px;
+     color: #3d5170;
+ }
+
+ .tilesWrapper,.infoCardsWrapper{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     padding-bottom: 25px;
+ }
+
+ .tiles {
+     height: 140px;
+     width: 18%;
+     background-color: white;
+     border-radius: 12px;
+     border: 1px solid rgba(0,0,0,.125);
+     box-shadow: 0 5px 10px gainsboro;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+ }
+
+ .increase,.decrease{
+     font-family: "Yu Gothic UI Semibold";
+     font-size: 12px;
+     z-index: 2;
+ }
+
+ .graphWrap{
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     overflow: hidden;
+     border-bottom-left-radius: 12px;
+     border-bottom-right-radius: 12px;
+ }
+.cardInfo {
+    font-size: 12px;
+    color:#818ea3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Yu Gothic UI Semibold";
+}
+
+.cardNumber {
+    font-size: 33px;
+    color:#3d5170;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    z-index: 2;
+}
+.usersGraphicsCard {
+    height: auto;
+    width: 65%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 5px 10px gainsboro;
+    margin-bottom: 20px;
+}
+
+.usersGraphWrap{
+    margin: 20px;
+}
+
+.usersByDeviceDiagramCard {
+    height: auto;
+    width: 31%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 5px 10px gainsboro;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.usersByDeviceDiagramGraphWrap{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.cardHeading {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Yu Gothic UI Semibold";
+    color: #3d5170;
+    padding:17px 20px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.newDraftCard {
+    height: auto;
+    width: 31%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 5px 10px gainsboro;
+    position: relative;
+}
+
+.newDraftContentWrap{
+    padding: 20px;
+    position: relative;
+}
+
+.NewDraftInput {
+    width: 100%;
+    height: 35px;
+    min-width: 150px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-size: 13px;
+    font-family: "Yu Gothic UI";
+    color: gray;
+}
+
+.NewDraftTextarea{
+    width: 100%;
+    min-width: 150px;
+    box-sizing: border-box;
+    height: 280px;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: "Yu Gothic UI";
+    color: gray;
+}
+
+.NewDraftInput:focus,.NewDraftTextarea:focus{
+    border-color: #007bff;
+    outline: 0;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+
+.createDraftBtn{
+    width: 100px;
+    height: 33px;
+    background: #007bff;
+    text-align: center;
+    line-height: 33px;
+    font-size: 12px;
+    color: white;
+    font-family: "Yu Gothic UI";
+    border-radius: 5px;
+    margin: 15px 20px;
+}
+
+.createDraftBtn:hover {
+    background: #006fe6;
+    box-shadow: 0 4px 10px rgba(0,123,255,.25);
+    cursor: pointer;
+}
+.discussionsCard{
+    height: 506px;
+    width: 40%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 5px 10px gainsboro;
+}
+.discussionWrap{
+    display: flex;
+    flex-direction: row;
+    padding :12px 15px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.discussionShortInfo {
+    padding-left:15px;
+    text-align: justify-all;
+}
+
+.discussionText{
+    color: #868e96;
+    font-size: 15px;
+    line-height: 22.5px;
+    font-family: "Yu Gothic UI Semibold";
+}
+.darkText {
+    color:#42484e;
+}
+.userAvatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+}
+.discussionBtnWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    transition: all 250ms;
+}
+
+.approve,.reject,.edit {
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #3d5170;
+    font-size: 11px;
+    font-family: "Yu Gothic UI";
+    border:1px solid gainsboro;
+}
+.approve {
+    width: 75px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.reject {
+    width: 64px;
+    border-left: none;
+    border-right: none;
+}
+.edit{
+    width: 52px;
+}
+.fa-check,.increase,.increaseIcon{
+    color: #17c671;
+    padding-right: 3px;
+}
+
+.fa-times,.decrease,.decreaseIcon{
+    color: #dc3545;
+    padding-right: 3px;
+}
+.editIcon{
+    color: #868e96;
+    font-size: 12px;
+    padding-right: 3px;
+}
+
+.discussionAction:hover,.viewCommentsBtn:hover {
+    box-shadow: 0 2px 5px gainsboro;
+}
+.viewCommentsBtn{
+    margin: 15px auto;
+    width: 137px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    color: #3d5170;
+    font-family: "Yu Gothic UI";
+    font-size: 12px;
+    background: white;
+    border-radius: 5px;
+    border:1px solid gainsboro;
+}
+.topReferralsCard {
+    height: 450px;
+    width: 23%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 5px 10px gainsboro
+}
+.referralWrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 15px;
+    border-bottom: 1px solid gainsboro;
+    font-size: 13px;
+    font-family: "Yu Gothic UI";
+}
+.refferalName{
+    color:#3d5170;
+}
+.refferalValue {
+    color: #818ea3;
+}
+
+.referralChoiseWrap {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.referralDateChoise{
+    padding: 7px;
+    font-size: 11px;
+    color: #3d5170;
+    font-family: "Yu Gothic UI";
+    width: 43%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border:0.5px solid gainsboro;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.referralDateChoise:focus{
+    border-color: #007bff;
+    outline: 0;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+
+.fullReport {
+    font-size: 12px;
+    color: #3d5170;
+    font-family: "Yu Gothic UI Semibold";
+}
+
+.fa-long-arrow-alt-right{
+    font-size: 12px;
+    color: #3d5170;
+}
+.fullReport:hover i ,.fullReport:hover{
+    color: #006fe6;
+}
+footer{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.footerLink {
+    padding: 15px;
+    font-size: 13px;
+    font-family: Tahoma;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footerLink:hover{
+    text-decoration: none;
+    color: #3d5170;
+}
+
+@media screen and (max-width: 1275px) {
+.discussionText{
+    font-size: 13px;
+}
+}
+
+@media screen and (max-width: 1174px){
+.discussionsCard {
+    height: 563px;
+}
+    .viewCommentsBtn {
+        margin: 15px auto;
+    }
+    .NewDraftTextarea {
+        height: 340px;
+    }
+    .discussionWrap {
+        padding: 10px 15px;
+    }
+
+}
+
+@media screen and (min-width:993px){
+    .businessCard,.travelCard,.technologyCard,.technologySecondCard,.usersCardPost {
+        height: auto;
+        width: 22.7%;
+    }
+
+    .travelPost,.businessPost {
+        width: 48.3%;
+        height: auto;
+    }
+    .UserPost{
+        height: auto;
+        width: 31.2%;
+    }
+
+    .cardInfoText,.postInfoText{
+        font-size: 15px;
+    }
+    .blogPostsWrapper{
+        justify-content: space-between;
+    }
+    .addNewPostWrap{
+        flex-wrap: nowrap;
+    }
+    .postEditor{
+        width: 70.9%;
+        margin-right: 15px;
+    }
+
+    .categoryInput{
+        max-width: 160px;
+        min-width: 100px;
+    }
+    .userAccountDetails{
+        height: auto;
+        width: 65.3%;
+    }
+    .userAccountCard{
+        height: 535px;
+        width: 31.4%;
+    }
+
+    }
+@media screen and (max-width: 992px){
+   .firstTile,.secondTile{
+       width: 45.7%;
+       height: 128px;
+       margin-bottom: 20px;
+   }
+    .thirdTile,.fourthTile,.fifthTile{
+        width: 28.8%;
+        height: 138px;
+    }
+
+    .usersGraphicsCard{
+        width: 96.2%;
+        margin-bottom: 20px;
+    }
+    .discussionsCard{
+        height: 448px;
+        width: 96.2%;
+        margin-bottom: 20px;
+    }
+
+    .discussionWrap {
+        padding: 12px 15px;
+    }
+    .topReferralsCard{
+        height: 450px;
+        width: 96.2%;
+    }
+
+    .menuHeading{
+        font-size: 12px;
+    }
+    .usersByDeviceDiagramCard,.newDraftCard {
+        width: 46%;
+        margin-bottom: 20px;
+    }
+    .NewDraftTextarea{
+        height: 133px;
+    }
+    .createDraftBtn {
+        margin: 10px 0px;
+    }
+    .discussionsWrapper {
+        padding-bottom: 0;
+    }
+    .viewCommentsBtn {
+        margin: 20px auto;
+    }
+    .businessCard,.travelCard,.technologyCard,.technologySecondCard ,.usersCardPost{
+        width: 45.8%;
+        height: auto;
+    }
+
+    .cardInfoText ,.postInfoText{
+        font-size: 12px;
+    }
+    .blogPostsWrapper{
+        justify-content: space-around;
+    }
+    .travelPost,.businessPost,.UserPost{
+        width: 97.5%;
+    }
+    .addNewPostWrap,.userProfileWrapper{
+        flex-wrap: wrap;
+    }
+    .postEditor,.postPrefWrap{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .categoryInput{
+        width: 93%;
+    }
+    .userAccountCard,.userAccountDetails{
+        height: auto;
+        width: 100%;
+    }
+
+    }
+@media screen and  (min-width: 768px){
+
+    .accountDetailWrap {
+        width: 49%;
+    }
+    .stateWrap{
+        width: 32.4%;
+    }
+    .zipWrap{
+        width: 15.2%;
+    }
+    .dashboardMenu{
+        width: 225px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        animation-name: none!important;
+    }
+    .menuHeading {
+        justify-content: flex-start;
+    }
+    .menuHeadingWrap{
+        height: 60px;
+    }
+    .menuBarSearchWrap{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+     .searchWrapper{
+        display: none;
+    }
+    .menuBarSearchWrap{
+        display: block;
+    }
+    .menuHeadingWrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .dashboardMenu{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 20;
+        background: white;
+        animation-name: none;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+
+
+    .menuHeading{
+        justify-content: center;
+    }
+
+    .contentWrap{
+        margin-left: 0;
+    }
+    .userBarWrap{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .firstTile,.secondTile,.thirdTile,.fourthTile{
+        height: 138px;
+        width: 47.7%;
+    }
+    .fifthTile {
+        width: 98.8%;
+        height: 138px;
+        margin-top: 20px;
+    }
+    .usersGraphicsCard{
+        width: 98.8%;
+    }
+    .usersByDeviceDiagramCard{
+        width: 98.8%;
+    }
+    .newDraftCard {
+        width: 98.8%;
+    }
+    .newDraftContentWrap {
+        padding: 15px;
+    }
+    .NewDraftInput {
+        margin-bottom: 15px;
+    }
+    .NewDraftTextarea {
+        height: 78px;
+    }
+    .discussionsCard,.topReferralsCard{
+        width: 98.8%;
+    }
+    .snackBar,.closeMenuBtn{
+        display: flex;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .travelPost,.businessPost,.UserPost,.businessCard,.travelCard,.technologyCard,.technologySecondCard ,.usersCardPost,.accountDetailWrap,.stateWrap,.zipWrap{
+        width: 100%;
+    }
+    }
+
+@media screen and (max-width: 575px){
+    .tiles{
+        width: 98%;
+    }
+    .thirdTile{
+        margin-bottom: 20px;
+    }
+    .dashboardHeading{
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .dashboardSubheading{
+        text-align: center;
+        font-size: 32px;
+    }
+}
+@media screen and (min-width: 478px) {
+    .PostSubheading{
+        font-size: 20px;
+    }
+    .cardInfoText{
+        margin-bottom: 25px;
+    }
+    .postBody{
+        padding: 25px;
+    }
+}
+@media screen and (max-width: 478px){
+    .discussionsCard{
+        height: 518px;
+    }
+
+    .TableInfo,.userTableInfo,.secondTableInfo{
+        font-size: 11px;
+    }
+    .PostSubheading{
+        font-size: 15px;
+    }
+    .cardInfoText{
+        margin-bottom: 10px;
+    }
+    .postBody{
+        padding: 15px;
+    }
+
+}
+
+@media screen and (max-width: 402px){
+    .discussionsCard{
+        height: 540px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .discussionsCard {
+        height: 584px;
+    }
+    .discussionShortInfo{
+        padding-left: 5px;
+    }
+    .TableInfo,.userTableInfo,.secondTableInfo{
+        font-size: 9px;
+    }
+
+}
+
+
+                                                                 /* Blog Posts Page */
+
+
+.blogPostsWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.businessCard,.travelCard,.technologyCard,.technologySecondCard{
+    box-shadow: 0 5px 10px gainsboro;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.cardImageWrap{
+    height: 165px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.postImageWrap{
+    height: 100%;
+    min-width: 180px;
+    max-width: 245px;
+}
+.blogPostImg{
+    width: 100%;
+    height: auto;
+}
+
+.PostImg{
+    width: 100%;
+    height: 100%;
+}
+
+.blogPostUserAvatar {
+    top: 150px;
+    height: 35px;
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 3px 7px gainsboro;
+    cursor: pointer;
+}
+
+.userPostAvatar{
+    bottom: 15px;
+    left: 15px;
+    height: 35px;
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 3px 7px gainsboro;
+    cursor: pointer;
+}
+.cardBody{
+    height: auto;
+    margin: 35px 25px 15px 25px;
+}
+
+.PostHeading{
+    height: 23px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    line-height: 23px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Yu Gothic UI Semibold";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.PostsHeading{
+    height: 23px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    line-height: 23px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Yu Gothic UI Semibold";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.PostSubheading{
+    color: #3d5170;
+    line-height: 25px;
+    margin-bottom: 15px;
+    font-family: "Yu Gothic UI Semibold";
+}
+.cardInfoText{
+    color: #5a6169;
+    font-weight: 450;
+    font-family: "Yu Gothic UI";
+}
+
+.PostSubheading:hover,.bookmarkInfo:hover,.darkText:hover{
+    color:#2b394f;
+    cursor:pointer;
+}
+.postDate {
+    color: #868e96;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Yu Gothic UI";
+}
+
+.businessColor{
+    background: #212529;
+}
+.businessColor:hover{
+    background:#0a0c0d;
+}
+
+.travelColor{
+    background:#00b8d8;
+}
+
+.travelColor:hover{
+    background: #008da5;
+}
+
+.technologyColor {
+    background: #007bff;
+}
+.technologyColor:hover{
+    background:#0056b3;
+}
+.technologyColor2 {
+    background: #ffb400;
+    color: #212529;
+}
+.technologyColor2:hover{
+      background: #cc9000;
+      color: #212529;
+  }
+
+.travelPost,.businessPost{
+    box-shadow: 0 5px 10px gainsboro;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.postBody{
+    height: auto;
+}
+
+
+.UserPost,.usersCardPost{
+    box-shadow: 0 5px 10px gainsboro;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookmarkWrap,.postAuthor{
+    padding: 16px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gainsboro;
+}
+
+.bookmarkInfo{
+    display: flex;
+}
+
+.bookmarkDate{
+    font-size: 12px;
+    font-family: Tahoma;
+    color: #868e96;
+}
+
+.userBookmarkAvatar{
+    height: 35px;
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 3px 7px gainsboro;
+    margin-right: 15px;
+}
+.postInfoText{
+    color: #5a6169;
+    font-weight: 450;
+    font-family: "Yu Gothic UI";
+}
+.fa-bookmark,.fa-user-plus{
+    margin-right: 7px;
+}
+.bookmarkBtn {
+    padding: 7px 14px;
+    border: 1px solid #e1e5eb;
+    color: #3d5170;
+    font-size: 11px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: "Yu Gothic UI";
+}
+
+.bookmarkBtn:hover {
+    box-shadow: 0 2px 10px rgb(220, 220, 220);
+
+}
+
+.postAuthor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+                                                                   /* Tables Page */
+
+
+.activeUsersTable,.inactiveUsersTable{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 5px 10px gainsboro;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.activeUsersTable{
+    background: white;
+    color: #5a6169;
+}
+
+.inactiveUsersTable,.secondTableHeading{
+    background: #212529;
+    color: white;
+
+}
+.tableUserWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid gainsboro;
+}
+.tableHeading{
+    background: #fbfbfb;
+    font-size: 16px;
+}
+
+.TableInfo,.secondTableInfo{
+    padding: 12px;
+    font-family: "Yu Gothic UI";
+    font-weight: bold;
+}
+.TableInfo{
+    color: #31373c;
+}
+
+.secondTableInfo,.secondTable{
+    color: white;
+}
+.userTableInfo{
+    padding: 12px;
+    font-family: "Yu Gothic UI Semibold";
+}
+
+.firstCell{
+    width: 2.7%;
+    text-align: center;
+}
+
+.secondCell{
+    width: 13%;
+    text-align: center;
+}
+.thirdCell{
+    width: 12.7%;
+    text-align: center;
+}
+.fourthCell{
+    width: 20.9%;
+    text-align: center;
+}
+.fifthCell{
+    width: 19.5%;
+    text-align: center;
+}
+.sixthCell{
+    width: 17.5%;
+    text-align: center;
+}
+
+
+
+                                                                /*Add new Post Page*/
+
+.addNewPostWrap,.userProfileWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.postEditor {
+    height: 511px;
+    box-shadow: 0 5px 10px gainsboro;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 16px;
+    position: relative;
+}
+
+.postActions,.postCategories,.userAccountCard,.userAccountDetails{
+    box-shadow: 0 5px 10px gainsboro;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.postPrefWrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.postTitleInput{
+    width: 100%;
+    min-width: 200px;
+    box-sizing: border-box;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 13px;
+}
+.postTitleInput,.categoryInput{
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Yu Gothic UI";
+    color: gray;
+    outline:0;
+}
+.postTitleInput:hover ,.categoryInput:hover,.accountDetailsInput:hover,.accountDetailsTextarea{
+    border-color: #c6c6c6;
+}
+.postTitleInput:focus,.categoryInput:focus{
+    border-color: #007bff;
+    outline: 0;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+
+.postTextEditor{
+    height: 440px;
+    width: 100%;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+
+}
+.postEditTools{
+    line-height: 25px;
+    padding: 8px;
+    border-bottom:1px solid gainsboro;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.fontSelect{
+    font-family: "Yu Gothic UI Semibold";
+    color: #3d5170;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    position: relative;
+}
+
+.fontDropdown{
+    display: none;
+    width: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    left: -28px;
+    top: 40px;
+    background: white;
+    box-shadow:0 4px 20px 2px gainsboro;
+    z-index: 20;
+    border-radius: 8px;
+}
+.dropdownItem {
+    font-family: Tahoma;
+    text-decoration: none;
+    display: block;
+    color: #3d5170;
+    padding: 0 15px;
+}
+
+.fontSelect:hover .fontDropdown {
+    display: block;
+}
+
+.fontStyleTools{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #3d5170;
+}
+
+.editIcon:hover {
+    cursor: pointer;
+    color: #006fe6;
+}
+.editIcon{
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+}
+.postTextPlace{
+    font-size: 15px;
+    text-indent: 15px;
+}
+
+.postStatusWrap {
+    padding: 20px 16px 12px 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid gainsboro;
+}
+
+.postActionsinfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.postActionsInfoWrap{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    text-align: center;
+}
+
+.actionText,.editBtn,.actionInfo{
+    font-size: 15px;
+    font-family: "Yu Gothic UI";
+}
+
+.actionText{
+    color: #42484e;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.readibilityStatus{
+    font-weight: 500;
+    color:#ffb400!important;
+}
+
+.visibilityStatus{
+    color:#17c671!important;
+    font-weight: 500;
+}
+.editBtn{
+    color: #006fe6;
+}
+
+.editBtn:hover{
+    color: #3d5170;
+    cursor: pointer;
+}
+.actionInfo {
+    color: #42484e;
+}
+.actionIcon{
+    color: #767f85;
+}
+.actionBtnWrap{
+    padding: 13px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.saveDraftBtn,.publishBtn{
+    font-size: 12px;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-family: "Yu Gothic UI";
+}
+.saveDraftBtn{
+    max-width: 70px;
+    min-width: 52px;
+    height: 16px;
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+
+.saveDraftBtn:hover{
+    transition: all 250ms;
+    color:white;
+    background: #007bff;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+.publishBtn{
+    max-width: 52px;
+    min-width: 38px;
+    height: 16px;
+    background: #007bff;
+    color: white;
+}
+.publishBtn:hover,.followBtn:hover{
+    transition: all 250ms;
+    color:white;
+    background: #006fe6;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+
+.postCategoryWrap{
+    padding: 11px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid gainsboro;
+}
+
+.statusInfo{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    font-family: "Yu Gothic UI";
+    color: #42484e;
+}
+.statusInfo input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border:1px solid gainsboro;
+    border-radius: 2px;
+}
+
+.statusInfo input:checked ~ .checkmark {
+    background-color: #007bff;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px gainsboro;
+    outline: 0;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.statusInfo input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.statusInfo .checkmark:after {
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.categoryInput{
+    height: 19px;
+    padding: 7px 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+.addBtn{
+    width: 12px;
+    height: 17px;
+    padding: 8px;
+    border:1px solid gainsboro;
+    border-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 10px;
+    color: #42484e;
+    text-align: center;
+    line-height: 17px;
+}
+
+.addBtn:hover{
+    box-shadow: 0 2px 7px gainsboro;
+}
+
+                                                            /*User profile Page*/
+
+
+.profileUpdateMsg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px 12px 30px;
+    color: #d7fae9;
+    background-color: #17c671;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Yu Gothic UI";
+    text-align: center;
+    transition: all 1s;
+}
+
+.UpdateMsgIcons{
+    font-size: 15px;
+    color: #d7fae9;
+    margin-right: 10px;
+}
+
+.userAccountCard{
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.userAccountBody{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.userProfilePhoto{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+.userProfileName{
+    font-size: 24px;
+    font-family: "Yu Gothic UI Semibold";
+    color: #3d5170;
+    text-align: center;
+}
+.userProfession,.workLoad,.workloadPercent,.descriptionHeading{
+    font-family: "Yu Gothic UI Semibold";
+    color: #868e96;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.followBtn{
+    width: 52px;
+    height: 16px;
+    padding: 7px 14px;
+    border:1px solid #007bff;
+    border-radius: 52px;
+    color:#007bff;
+    font-family: "Yu Gothic UI";
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.workloadWrap{
+    padding: 13px 24px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gainsboro;
+}
+
+.workloadLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 22px;
+    text-align: center;
+}
+
+.workloadBar{
+    height: 5px;
+    width: 100%;
+    background: #e1e5eb;
+    border-radius: 3px;
+    position: relative;
+}
+
+.workloadBarPercent{
+    height: 5px;
+    width: 74%;
+    background: #007bff;
+    border-radius: 3px;
+    position:absolute;
+}
+
+.profileDescription{
+    padding: 24px;
+}
+.descriptionHeading{
+    text-align: left;
+}
+.descriptionText,.workloadPercent{
+    font-family: "Yu Gothic UI";
+    color: #868e96;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.inputHeading{
+    font-family: "Yu Gothic UI";
+    color: #868e96;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.accountDetailsInput {
+    width: 100%;
+    height: 31px;
+    margin-bottom: 16px;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-size: 13px;
+    font-family: "Yu Gothic UI";
+    color: #868e96;
+}
+.ZipInput,.adressWrap,.descriptionWrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.userAccountDetailsBody{
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.accountDetailWrap,.stateWrap,.zipWrap{
+    display: flex;
+    flex-direction: column;
+}
+
+ .accountDetailsTextarea{
+     min-width: 200px;
+    height: 95px;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-family: "Yu Gothic UI";
+    color: #868e96;
+    margin-bottom: 25px;
+}
+
+.accountDetailsInput:focus,.accountDetailsTextarea:focus{
+    border-color: #007bff;
+    outline: 0;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}
+
+.updateAccountBtn{
+    width: 88px;
+    height: 13px;
+    padding: 9px 16px;
+    background: #007bff;
+    text-align: center;
+    line-height: 12px;
+    font-size: 12px;
+    color: white;
+    font-family: "Yu Gothic UI";
+    border-radius: 5px;
+}
+
+.updateAccountBtn:hover {
+    background: #006fe6;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+    cursor: pointer;
+}
+
+.userStateChoise{
+    padding: 7px;
+    font-size: 11px;
+    color: #3d5170;
+    font-family: "Yu Gothic UI";
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border:1px solid gainsboro;
+    border-radius: 5px;
+    outline: 0;
+    margin-bottom: 16px;
+}
+
+.userStateChoise:focus{
+    border-color: #007bff;
+    outline: 0;
+    box-shadow:0 4px 10px rgba(0,123,255,.25);
+}

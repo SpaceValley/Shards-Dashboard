@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shards Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="dashboardMenu">
+        <div class="menuHeadingWrap">
+            <div class="menuHeading"><img src="./shards-dashboards-logo.svg" width="25" height="25" alt="logo"
+                                          class="logoImg">Shards Dashboard</div>
+            <div class="closeMenuBtn" onclick="hideMenu()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="menuBarSearchWrap ">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <a href="./Blog%20Dashboard.html" class="menuItem"><i class="fas fa-pen menuIcon"></i>Blog Dashboard</a>
+        <a href="./Blog%20posts.html" class="menuItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+        <a href="./Add%20new%20Post.html" class="menuItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+        <a href="./Tables.html" class="menuItem"><i class="fas fa-table menuIcon"></i>Tables</a>
+        <a href="./User%20Profile.html" class="menuItem"><i class="fas fa-user menuIcon"></i>User profile</a>
+    </div>
+</nav>
+<div class="contentWrap">
+    <div class="userTopBar">
+        <div class="searchWrapper">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <div class="userBarWrap">
+            <div class="profileNotificationWrap">
+                <div class="notificationWrapper"><i class="fas fa-bell"></i></div>
+                <div class="userSelectProfile" onclick="openDropdown()"><img src="./0.jpg" width="40" height="40" alt="logo" class="profileImg">
+                    <div class="userName ">Sierra Brooks
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown" style="display: none">
+                            <a href="./User%20Profile.html" class="dropdownItem"><i class="fas fa-user menuIcon"></i>Profile</a>
+                            <a href="./Add%20new%20Post.html" class="dropdownItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+                            <a href="./Blog%20posts.html" class="dropdownItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+                            <a href="#" class="dropdownItem logout"><i class="fas fa-sign-out-alt menuIcon"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snackBar"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="dashboardWrapper">
+        <div class="dashboardHeading">blog posts</div>
+        <div class="dashboardSubheading">Add New Post</div>
+        <div class="addNewPostWrap">
+            <div class="postEditor">
+                <div class="postTitleInputWrap">
+                <input type="text" placeholder="Your Post Title" class="postTitleInput">
+                </div>
+                <div class="postTextEditor">
+                    <div class="postEditTools">
+                        <div class="fontStyleTools">
+                            <div class="fontSelect editIcon">Normal
+                                <i class="fas fa-caret-down editIcon"></i>
+                                <div class="fontDropdown">
+                                    <div class="dropdownItem editIcon"><h1>Heading 1</h1></div>
+                                    <div class="dropdownItem editIcon"><h2>Heading 2</h2></div>
+                                    <div class="dropdownItem editIcon"><h3>Heading 3</h3></div>
+                                    <div class="dropdownItem editIcon"><h4>Heading 4</h4></div>
+                                    <div class="dropdownItem editIcon"><h5>Heading 5</h5></div>
+                                    <div class="dropdownItem editIcon"><h6>Normal</h6></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-bold editIcon"></i>
+                            <i class="fas fa-italic editIcon"></i>
+                            <i class="fas fa-underline editIcon"></i>
+                            <i class="fas fa-strikethrough editIcon"></i>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-quote-right editIcon"></i>
+                            <i class="fas fa-code editIcon"></i>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-heading editIcon">1</i>
+                            <i class="fas fa-heading editIcon">2</i>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-list-ol editIcon"></i>
+                            <i class="fas fa-list-ul editIcon"></i>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-subscript editIcon"></i>
+                            <i class="fas fa-superscript editIcon"></i>
+                        </div>
+                        <div class="fontStyleTools">
+                            <i class="fas fa-indent editIcon"></i>
+                        </div>
+                    </div>
+                    <div class="postTextPlace"
+                         data-placeholder="Words can be like x-rays if you use them properly..."></div>
+                </div>
+            </div>
+            <div class="postPrefWrap">
+                <div class="postActions">
+                    <div class="cardHeading">Actions</div>
+                    <div class="postStatusWrap">
+                        <div class="postActionsinfo">
+                            <div class="postActionsInfoWrap">
+                                <i class="fas fa-flag actionIcon"></i>
+                                <div class="actionText">Status:</div>
+                                <span class="actionInfo">Draft</span>
+                            </div>
+                            <div class="editBtn">Edit</div>
+                        </div>
+                        <div class="postActionsinfo">
+                            <div class="postActionsInfoWrap">
+                                <i class="fas fa-eye actionIcon"></i>
+                                <span class="actionText">Visibility:</span><span class="actionInfo visibilityStatus">Public</span>
+                            </div>
+                            <div class="editBtn">Edit</div>
+                        </div>
+                        <div class="postActionsinfo">
+                            <div class="postActionsInfoWrap">
+                                <i class="far fa-calendar actionIcon"></i>
+                                <span class="actionText">Schedule:</span><span class="actionInfo">Now</span>
+                            </div>
+                            <div class="editBtn">Edit</div>
+                        </div>
+                        <div class="postActionsinfo">
+                            <div class="postActionsInfoWrap">
+                                <i class="fas fa-file-signature actionIcon"></i>
+                                <span class="actionText">Readability:</span><span class="actionInfo readibilityStatus">Ok</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actionBtnWrap">
+                        <div class="saveDraftBtn">
+                            <i class="fas fa-save"></i>
+                            <span>Save Draft</span>
+                        </div>
+                        <div class="publishBtn">
+                            <i class="fas fa-file-upload"></i>
+                            <span>Publish</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="postCategories">
+                    <div class="cardHeading">Categories</div>
+                    <div class="postCategoryWrap">
+                        <label class="statusInfo">Uncategorized
+                            <input type="checkbox" class="categoryCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="statusInfo">Design
+                            <input type="checkbox" class="categoryCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="statusInfo">Development
+                            <input type="checkbox" class="categoryCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="statusInfo">Writing
+                            <input type="checkbox" class="categoryCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="statusInfo">Books
+                            <input type="checkbox" class="categoryCheckbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="actionBtnWrap">
+                        <input type="text" placeholder="New Category" class="categoryInput">
+                        <div class="addBtn"><i class="fas fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="footerLink">Home</a>
+        <a href="#" class="footerLink">Services</a>
+        <a href="#" class="footerLink">About</a>
+        <a href="#" class="footerLink">Products</a>
+        <a href="#" class="footerLink">Blog</a>
+    </footer>
+</div>
+<script src="blogDashboard.js"></script>
+</body>
+</html>

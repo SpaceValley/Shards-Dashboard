@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shards Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="dashboardMenu">
+        <div class="menuHeadingWrap">
+            <div class="menuHeading"><img src="./shards-dashboards-logo.svg" width="25" height="25" alt="logo"
+                                          class="logoImg">Shards Dashboard</div>
+            <div class="closeMenuBtn" onclick="hideMenu()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="menuBarSearchWrap ">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <a href="./Blog%20Dashboard.html" class="menuItem"><i class="fas fa-pen menuIcon"></i>Blog Dashboard</a>
+        <a href="./Blog%20posts.html" class="menuItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+        <a href="./Add%20new%20Post.html" class="menuItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+        <a href="./Tables.html" class="menuItem"><i class="fas fa-table menuIcon"></i>Tables</a>
+        <a href="./User%20Profile.html" class="menuItem"><i class="fas fa-user menuIcon"></i>User profile</a>
+    </div>
+</nav>
+<div class="contentWrap">
+    <div class="userTopBar">
+        <div class="searchWrapper">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <div class="userBarWrap">
+            <div class="profileNotificationWrap">
+                <div class="notificationWrapper"><i class="fas fa-bell"></i></div>
+                <div class="userSelectProfile" onclick="openDropdown()"><img src="./0.jpg" width="40" height="40" alt="logo" class="profileImg">
+                    <div class="userName ">Sierra Brooks
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown" style="display: none">
+                            <a href="./User%20Profile.html" class="dropdownItem"><i class="fas fa-user menuIcon"></i>Profile</a>
+                            <a href="./Add%20new%20Post.html" class="dropdownItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+                            <a href="./Blog%20posts.html" class="dropdownItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+                            <a href="#" class="dropdownItem logout"><i class="fas fa-sign-out-alt menuIcon"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snackBar"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="dashboardWrapper">
+        <div class="dashboardHeading">overview</div>
+        <div class="dashboardSubheading">Data Tables</div>
+        <div class="activeUsersTable">
+            <div class="cardHeading">Active Users</div>
+            <div class="tableUserWrap tableHeading">
+                <div class="TableInfo firstCell">#</div>
+                <div class="TableInfo secondCell">First Name</div>
+                <div class="TableInfo thirdCell">Last Name</div>
+                <div class="TableInfo fourthCell">Country</div>
+                <div class="TableInfo fifthCell">City</div>
+                <div class="TableInfo sixthCell">Phone</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">1</div>
+                <div class="userTableInfo secondCell">Ali</div>
+                <div class="userTableInfo thirdCell">Kerry</div>
+                <div class="userTableInfo fourthCell">Russian Federation</div>
+                <div class="userTableInfo fifthCell">Gdansk</div>
+                <div class="userTableInfo sixthCell">107-0339</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">2</div>
+                <div class="userTableInfo secondCell">Clark</div>
+                <div class="userTableInfo thirdCell">Angela</div>
+                <div class="userTableInfo fourthCell">Estonia</div>
+                <div class="userTableInfo fifthCell">Borghetto di Vara</div>
+                <div class="userTableInfo sixthCell">1-660-850-1647</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">3</div>
+                <div class="userTableInfo secondCell">Jerry</div>
+                <div class="userTableInfo thirdCell">Nathan</div>
+                <div class="userTableInfo fourthCell">Cyprus</div>
+                <div class="userTableInfo fifthCell">Braunau am Inn	</div>
+                <div class="userTableInfo sixthCell">214-4225</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">4</div>
+                <div class="userTableInfo secondCell">Colt</div>
+                <div class="userTableInfo thirdCell">Angela</div>
+                <div class="userTableInfo fourthCell">Liberia</div>
+                <div class="userTableInfo fifthCell">Bad Hersfeld</div>
+                <div class="userTableInfo sixthCell">1-848-473-7416</div>
+            </div>
+        </div>
+        <div class="inactiveUsersTable">
+            <div class="cardHeading secondTable">Inactive Users</div>
+            <div class="tableUserWrap">
+                <div class="secondTableInfo firstCell">#</div>
+                <div class="secondTableInfo secondCell">First Name</div>
+                <div class="secondTableInfo thirdCell">Last Name</div>
+                <div class="secondTableInfo fourthCell">Country</div>
+                <div class="secondTableInfo fifthCell">City</div>
+                <div class="secondTableInfo sixthCell">Phone</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">1</div>
+                <div class="userTableInfo secondCell">Ali</div>
+                <div class="userTableInfo thirdCell">Kerry</div>
+                <div class="userTableInfo fourthCell">Russian Federation</div>
+                <div class="userTableInfo fifthCell">Gdansk</div>
+                <div class="userTableInfo sixthCell">107-0339</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">2</div>
+                <div class="userTableInfo secondCell">Clark</div>
+                <div class="userTableInfo thirdCell">Angela</div>
+                <div class="userTableInfo fourthCell">Estonia</div>
+                <div class="userTableInfo fifthCell">Borghetto di Vara</div>
+                <div class="userTableInfo sixthCell">1-660-850-1647</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">3</div>
+                <div class="userTableInfo secondCell">Jerry</div>
+                <div class="userTableInfo thirdCell">Nathan</div>
+                <div class="userTableInfo fourthCell">Cyprus</div>
+                <div class="userTableInfo fifthCell">Braunau am Inn	</div>
+                <div class="userTableInfo sixthCell">214-4225</div>
+            </div>
+            <div class="tableUserWrap">
+                <div class="userTableInfo firstCell">4</div>
+                <div class="userTableInfo secondCell">Colt</div>
+                <div class="userTableInfo thirdCell">Angela</div>
+                <div class="userTableInfo fourthCell">Liberia</div>
+                <div class="userTableInfo fifthCell">Bad Hersfeld</div>
+                <div class="userTableInfo sixthCell">1-848-473-7416</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="footerLink">Home</a>
+        <a href="#" class="footerLink">Services</a>
+        <a href="#" class="footerLink">About</a>
+        <a href="#" class="footerLink">Products</a>
+        <a href="#" class="footerLink">Blog</a>
+    </footer>
+</div>
+<script src="blogDashboard.js"></script>
+</body>
+</html>

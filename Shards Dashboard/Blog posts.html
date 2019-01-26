@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shards Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="dashboardMenu">
+        <div class="menuHeadingWrap">
+            <div class="menuHeading"><img src="./shards-dashboards-logo.svg" width="25" height="25" alt="logo"
+                                          class="logoImg">Shards Dashboard</div>
+            <div class="closeMenuBtn" onclick="hideMenu()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="menuBarSearchWrap ">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <a href="./Blog%20Dashboard.html" class="menuItem"><i class="fas fa-pen menuIcon"></i>Blog Dashboard</a>
+        <a href="./Blog%20posts.html" class="menuItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+        <a href="./Add%20new%20Post.html" class="menuItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+        <a href="./Tables.html" class="menuItem"><i class="fas fa-table menuIcon"></i>Tables</a>
+        <a href="./User%20Profile.html" class="menuItem"><i class="fas fa-user menuIcon"></i>User profile</a>
+    </div>
+</nav>
+<div class="contentWrap">
+    <div class="userTopBar">
+        <div class="searchWrapper">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <div class="userBarWrap">
+            <div class="profileNotificationWrap">
+                <div class="notificationWrapper"><i class="fas fa-bell"></i></div>
+                <div class="userSelectProfile" onclick="openDropdown()"><img src="./0.jpg" width="40" height="40" alt="logo" class="profileImg">
+                    <div class="userName ">Sierra Brooks
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown" style="display: none">
+                            <a href="./User%20Profile.html" class="dropdownItem"><i class="fas fa-user menuIcon"></i>Profile</a>
+                            <a href="./Add%20new%20Post.html" class="dropdownItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+                            <a href="./Blog%20posts.html" class="dropdownItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+                            <a href="#" class="dropdownItem logout"><i class="fas fa-sign-out-alt menuIcon"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snackBar"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="dashboardWrapper">
+        <div class="dashboardHeading">components</div>
+        <div class="dashboardSubheading">Blog Posts</div>
+        <div class="blogPostsWrapper">
+            <div class="businessCard">
+                <div class="cardImageWrap">
+                <img src="./business.jpeg" alt="business" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostHeading businessColor">Business</div>
+                    <div class="userCardAvatar">
+                        <img src="./0.jpg" alt="userAvatar" class="blogPostUserAvatar">
+                    </div>
+                    <div class="PostSubheading">Conduct at an replied removal an amongst</div>
+                    <div class="cardInfoText">However venture pursuit he am mr cordial. Forming musical am hearing
+                        studied be luckily. But in for determine what would see...
+                    </div>
+                    <div class="postDate">28 February 2019</div>
+                </div>
+            </div>
+            <div class="travelCard">
+                <div class="cardImageWrap">
+                <img src="./travel.jpeg" alt="travel" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostHeading travelColor">travel</div>
+                    <div class="userCardAvatar">
+                        <img src="./1.jpg" alt="userAvatar" class="blogPostUserAvatar">
+                    </div>
+                    <div class="PostSubheading">Off tears are day blind smile alone had ready</div>
+                    <div class="cardInfoText">Is at purse tried jokes china ready decay an. Small its shy way had woody
+                        downs power. To denoting admitted speaking learning my...
+                    </div>
+                    <div class="postDate">29 February 2019</div>
+                </div>
+            </div>
+            <div class="technologyCard">
+                <div class="cardImageWrap">
+                <img src="./technology1.jpeg" alt="technology1" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostHeading technologyColor">technology</div>
+                    <div class="userCardAvatar">
+                        <img src="./2.jpg" alt="userAvatar" class="blogPostUserAvatar">
+                    </div>
+                    <div class="PostSubheading">Difficult in delivered extensive at direction</div>
+                    <div class="cardInfoText">Is at purse tried jokes china ready decay an. Small its shy way had woody
+                        downs power. To denoting admitted speaking learning my...
+                    </div>
+                    <div class="postDate">29 February 2019</div>
+                </div>
+            </div>
+            <div class="technologySecondCard">
+                <div class="cardImageWrap">
+                <img src="./technology2.jpeg" alt="technology2" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostHeading technologyColor2">technology</div>
+                    <div class="userCardAvatar">
+                        <img src="./3.jpg" alt="userAvatar" class="blogPostUserAvatar">
+                    </div>
+                    <div class="PostSubheading">It so numerous if he may outlived disposal</div>
+                    <div class="cardInfoText">How but sons mrs lady when. Her especially are unpleasant out alteration
+                        continuing unreserved ready road market resolution...
+                    </div>
+                    <div class="postDate">29 February 2019</div>
+                </div>
+            </div>
+            <div class="travelPost">
+                <div class="postImageWrap">
+                <img src="./travelpost.jpeg" alt="travelpost" class="PostImg">
+                </div>
+                <div class="postBody">
+                    <div class="PostsHeading travelColor">travel</div>
+                    <img src="./3.jpg" alt="userAvatar" class="userPostAvatar">
+                    <div class="PostSubheading">Attention he extremity unwilling on otherwise cars backwards yet</div>
+                    <div class="cardInfoText">Conviction up partiality as delightful is discovered. Yet jennings
+                        resolved disposed exertion you off. Left did fond drew fat head poor jet pan flying over...
+                    </div>
+                    <div class="postDate">29 February 2019</div>
+                </div>
+            </div>
+            <div class="businessPost">
+                <div class="postImageWrap">
+                <img src="./businesspost.jpeg" alt="travelpost" class="PostImg">
+                </div>
+                <div class="postBody">
+                    <div class="PostsHeading businessColor">business</div>
+                    <img src="./1.jpg" alt="userAvatar" class="userPostAvatar">
+                    <div class="PostSubheading">Totally words widow one downs few age every seven if miss part by fact
+                    </div>
+                    <div class="cardInfoText">Discovered had get considered projection who favourable. Necessary up
+                        knowledge it tolerably. Unwilling departure education to admitted speaking...
+                    </div>
+                    <div class="postDate">29 February 2019</div>
+                </div>
+            </div>
+
+            <div class="UserPost">
+                <div class="postBody">
+                    <div class="PostSubheading">Had denoting properly jointure which well books beyond</div>
+                    <div class="postInfoText">In said to of poor full be post face snug. Introduced imprudence see say
+                        unpleasing devonshire acceptance son. Exeter longer...
+                    </div>
+                </div>
+                <div class="bookmarkWrap">
+                    <div class="bookmarkInfo">
+                        <img src="./1.jpg" alt="userAvatar" class="userBookmarkAvatar">
+                        <div class="postInfoText">James Khan<br><span class="bookmarkDate">21 March 2011</span></div>
+                    </div>
+                    <div class="bookmarkBtn">
+                        <i class="far fa-bookmark"></i>Bookmark
+                    </div>
+                </div>
+
+            </div>
+            <div class="UserPost">
+                <div class="postBody">
+                    <div class="PostSubheading">Husbands ask repeated resolved but laughter debating</div>
+                    <div class="postInfoText">It abode words began enjoy years no do ﻿no. Tried spoil as heart visit
+                        blush or. Boy possible blessing sensible set but margaret interest. Off tears...
+                    </div>
+                </div>
+                <div class="bookmarkWrap">
+                    <div class="bookmarkInfo">
+                        <img src="./2.jpg" alt="userAvatar" class="userBookmarkAvatar">
+                        <div class="postInfoText">Chris Jones<br><span class="bookmarkDate">21 March 2011</span></div>
+                    </div>
+                    <div class="bookmarkBtn">
+                        <i class="far fa-bookmark"></i>Bookmark
+                    </div>
+                </div>
+            </div>
+            <div class="UserPost">
+                <div class="postBody">
+                    <div class="PostSubheading">Instantly gentleman contained belonging exquisite now direction</div>
+                    <div class="postInfoText">West room at sent if year. Numerous indulged distance old law you. Total
+                        state as merit court green decay he. Steepest merit checking railway...
+                    </div>
+                </div>
+                <div class="bookmarkWrap">
+                    <div class="bookmarkInfo">
+                        <img src="./3.jpg" alt="userAvatar" class="userBookmarkAvatar">
+                        <div class="postInfoText">Mark Jameson<br><span class="bookmarkDate">21 March 2011</span></div>
+                    </div>
+                    <div class="bookmarkBtn">
+                        <i class="far fa-bookmark"></i>Bookmark
+                    </div>
+                </div>
+            </div>
+            <div class="usersCardPost">
+                <div class="cardImageWrap">
+                <img src="./blogpost1.jpeg" alt="business" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostSubheading">Extremity so attending objection as engrossed</div>
+                    <div class="cardInfoText">Morning prudent removal an letters by. On could my in order never it. Or
+                        excited certain sixteen it to parties colonel not seeing...
+                    </div>
+                </div>
+                <div class="postAuthor">
+                    <div class="discussionText">By <span class="darkText">Alene Trenton</span> in <span
+                            class="darkText">News</span>
+                    </div>
+                </div>
+            </div>
+            <div class="usersCardPost">
+                <div class="cardImageWrap">
+                <img src="./blogpost2.jpeg" alt="business" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostSubheading">Bed sincerity yet therefore forfeited his</div>
+                    <div class="cardInfoText">Pursuit chamber as elderly amongst on. Distant however warrant farther to
+                        of. My justice wishing prudent waiting in be...
+                    </div>
+                </div>
+                <div class="postAuthor">
+                    <div class="discussionText">By <span class="darkText">Chris Jamie</span> in <span
+                            class="darkText">News</span>
+                    </div>
+                </div>
+            </div>
+            <div class="usersCardPost">
+                <div class="cardImageWrap">
+                <img src="./blogpost3.jpeg" alt="business" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostSubheading">Object remark lively all did feebly excuse our</div>
+                    <div class="cardInfoText">Speaking throwing breeding betrayed children my to. Me marianne no he
+                        horrible produced ye. Sufficient unpleasing and...
+                    </div>
+                </div>
+                <div class="postAuthor">
+                    <div class="discussionText">By <span class="darkText">Monica Jordan</span> in <span
+                            class="darkText">News</span>
+                    </div>
+                </div>
+            </div>
+            <div class="usersCardPost">
+                <div class="cardImageWrap">
+                <img src="./blogpost4.jpeg" alt="business" class="blogPostImg">
+                </div>
+                <div class="cardBody">
+                    <div class="PostSubheading">His followed carriage proposal entrance</div>
+                    <div class="cardInfoText">For county now sister engage had season better had waited. Occasional mrs
+                        interested far expression directly as regard...
+                    </div>
+                </div>
+                <div class="postAuthor">
+                    <div class="discussionText">By <span class="darkText">Monica Jordan</span> in <span
+                            class="darkText">News</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="footerLink">Home</a>
+        <a href="#" class="footerLink">Services</a>
+        <a href="#" class="footerLink">About</a>
+        <a href="#" class="footerLink">Products</a>
+        <a href="#" class="footerLink">Blog</a>
+    </footer>
+</div>
+<script src="blogDashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            background: black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<li class="item" onclick="color()">1235467</li>
+<li class="item" onclick="color()">wertyu</li>
+<li class="item" onclick="color()">456789</li>
+<script>
+    var li = document.getElementsByTagName('li');
+    function color(){
+    for(var i=0; i<3 ;i++){
+        document.getElementsByTagName('li')[i].style.background = "red";
+    }}
+</script>
+</body>
+</html>

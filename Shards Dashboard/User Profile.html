@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shards Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="dashboardMenu">
+        <div class="menuHeadingWrap">
+            <div class="menuHeading"><img src="./shards-dashboards-logo.svg" width="25" height="25" alt="logo"
+                                          class="logoImg">Shards Dashboard</div>
+            <div class="closeMenuBtn" onclick="hideMenu()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="menuBarSearchWrap ">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <a href="./Blog%20Dashboard.html" class="menuItem"><i class="fas fa-pen menuIcon"></i>Blog Dashboard</a>
+        <a href="./Blog%20posts.html" class="menuItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+        <a href="./Add%20new%20Post.html" class="menuItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+        <a href="./Tables.html" class="menuItem"><i class="fas fa-table menuIcon"></i>Tables</a>
+        <a href="./User%20Profile.html" class="menuItem"><i class="fas fa-user menuIcon"></i>User profile</a>
+    </div>
+</nav>
+<div class="contentWrap">
+    <div class="userTopBar">
+        <div class="searchWrapper">
+            <i class="fas fa-search"></i><input type="text" class="topSearch" placeholder="Search for something...">
+        </div>
+        <div class="userBarWrap">
+            <div class="profileNotificationWrap">
+                <div class="notificationWrapper"><i class="fas fa-bell"></i></div>
+                <div class="userSelectProfile" onclick="openDropdown()"><img src="./0.jpg" width="40" height="40" alt="logo" class="profileImg">
+                    <div class="userName ">Sierra Brooks
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown" style="display: none">
+                            <a href="./User%20Profile.html" class="dropdownItem"><i class="fas fa-user menuIcon"></i>Profile</a>
+                            <a href="./Add%20new%20Post.html" class="dropdownItem"><i class="far fa-plus-square menuIcon"></i>Add new post</a>
+                            <a href="./Blog%20posts.html" class="dropdownItem"><i class="fab fa-elementor menuIcon"></i>Blog posts</a>
+                            <a href="#" class="dropdownItem logout"><i class="fas fa-sign-out-alt menuIcon"></i>Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="snackBar"><i class="fas fa-bars"></i></div>
+        </div>
+    </div>
+    <div class="profileUpdateMsg">
+        <div class="messageWrap">
+            <i class="fas fa-check UpdateMsgIcons"></i>
+            <span class="messageText">Success! Your profile has been updated!</span>
+        </div>
+        <i class="fas fa-times UpdateMsgIcons" onclick="closeMsg()"></i>
+    </div>
+    <div class="dashboardWrapper">
+        <div class="dashboardHeading">overview</div>
+        <div class="dashboardSubheading">User Profile</div>
+        <div class="userProfileWrapper">
+            <div class="userAccountCard">
+                <div class="userAccountBody">
+                    <img src="./0.jpg" alt="userProfilePhoto" class="userProfilePhoto">
+                    <div class="userProfileName">Sierra Brooks</div>
+                    <div class="userProfession">Project Manager</div>
+                    <div class="followBtn">
+                        <i class="fas fa-user-plus"></i>Follow
+                    </div>
+                </div>
+                <div class="workloadWrap">
+                    <div class="workloadLabel">
+                        <div class="workLoad">Workload</div>
+                        <div class="workloadPercent">74%</div>
+                    </div>
+                <div class="workloadBar">
+                    <div class="workloadBarPercent"></div>
+                </div>
+                </div>
+
+                <div class="profileDescription">
+                    <div class="descriptionHeading">Description</div>
+                    <div class="descriptionText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda cum, distinctio dolorem earum eos explicabo facere fugit, id illo libero modi molestiae nesciunt placeat provident quia quo suscipit </div>
+        </div>
+            </div>
+            <div class="userAccountDetails">
+                <div class="cardHeading">Account Details</div>
+                <div class="userAccountDetailsBody">
+                    <div class="accountDetailWrap">
+                        <label class="inputHeading">First Name</label>
+                        <input type="text" placeholder="First Name" class="accountDetailsInput">
+                    </div>
+                    <div class="accountDetailWrap">
+                        <label class="inputHeading">Last Name</label>
+                        <input type="text" placeholder="Last Name" class="accountDetailsInput">
+                    </div>
+                        <div class="accountDetailWrap">
+                        <label class="inputHeading">Email</label>
+                        <input type="text" placeholder="Email" class="accountDetailsInput">
+                    </div>
+                    <div class="accountDetailWrap">
+                        <label class="inputHeading">Password</label>
+                        <input type="text" placeholder="Password" class="accountDetailsInput">
+                    </div>
+                    <div class="adressWrap">
+                        <label class="inputHeading">Adress</label>
+                        <input type="text" placeholder="1234 Main St" class="accountDetailsInput adressInput">
+                    </div>
+                    <div class="accountDetailWrap">
+                        <label class="inputHeading">City</label>
+                        <input type="text" class="accountDetailsInput">
+                    </div>
+                    <div class="stateWrap">
+                        <label class="inputHeading">State</label>
+                        <select class="userStateChoise">
+                            <option value="">...</option>
+                        </select>
+                    </div>
+                    <div class="zipWrap">
+                        <label class="inputHeading">Zip</label>
+                        <input type="text" class="accountDetailsInput ZipInput">
+                    </div>
+                    <div class="descriptionWrap">
+                        <label class="inputHeading">Description</label>
+                        <textarea class="accountDetailsTextarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, quam! Ab animi beatae consectetur consequatur cupiditate dolorum hic impedit iure laboriosam magni nulla officiis quisquam reprehenderit veniam, voluptates! Quidem?</textarea>
+                    </div>
+                    <div class="updateAccountBtn">Update Account</div>
+                </div>
+                </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#" class="footerLink">Home</a>
+        <a href="#" class="footerLink">Services</a>
+        <a href="#" class="footerLink">About</a>
+        <a href="#" class="footerLink">Products</a>
+        <a href="#" class="footerLink">Blog</a>
+    </footer>
+</div>
+<script src="blogDashboard.js"></script>
+</body>
+</html>
